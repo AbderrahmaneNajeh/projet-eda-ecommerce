@@ -1,0 +1,280 @@
+# 📊 Analyse Exploratoire E-commerce - Portfolio Data Analyst
+
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Statsmodels](https://img.shields.io/badge/Statsmodels-4051B5?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+
+<p align="center">
+  <img src="images/02_evolution_mensuelle.png" alt="Evolution des ventes" width="800"/>
+</p>
+
+## 🎯 Objectif du Projet
+
+Réaliser une **analyse exploratoire complète** d'un dataset e-commerce (~500 000 transactions) pour :
+- Comprendre les comportements d'achat des clients
+- Identifier les tendances et patterns temporels
+- Segmenter la clientèle pour optimiser les actions marketing
+- Construire des modèles de prévision des ventes
+
+---
+
+## 📈 Résultats Clés
+
+### KPIs Globaux
+
+| Indicateur | Valeur |
+|------------|--------|
+| 💰 **Chiffre d'affaires total** | 8.9M € |
+| 🧾 **Nombre de transactions** | 22 190 |
+| 👥 **Clients uniques** | 4 372 |
+| 📦 **Produits différents** | 3 665 |
+| 🛒 **Panier moyen** | 401 € |
+
+### Insights Business
+
+✅ **Temporalité** : Pic de ventes à 12h, le jeudi est le jour le plus performant (+18% vs moyenne)
+
+✅ **Géographie** : Le Royaume-Uni représente 82% du CA → fort potentiel d'expansion internationale
+
+✅ **Pareto** : 20% des clients génèrent 80% du chiffre d'affaires
+
+✅ **Rétention** : Taux de rétention moyen de 25% après le 1er mois
+
+---
+
+## 🔬 Analyses Réalisées
+
+### 1️⃣ Analyse Exploratoire (EDA)
+- Nettoyage des données (doublons, valeurs manquantes, outliers)
+- Feature engineering (extraction de composantes temporelles)
+- Visualisations des distributions et tendances
+- Analyses géographiques et produits
+
+<p align="center">
+  <img src="images/05_top_pays.png" alt="Top pays" width="600"/>
+</p>
+
+### 2️⃣ Segmentation RFM (Recency, Frequency, Monetary)
+- Scoring des clients sur 3 dimensions
+- Identification de 8 segments clients
+- **Champions** : 10% des clients → 40% du CA
+
+<p align="center">
+  <img src="images/08_segmentation_rfm.png" alt="Segmentation RFM" width="800"/>
+</p>
+
+### 3️⃣ Analyse de Cohortes
+- Construction de la matrice de rétention
+- Identification des cohortes performantes
+- Analyse de la courbe de rétention
+
+<p align="center">
+  <img src="images/09_matrice_retention.png" alt="Matrice de rétention" width="700"/>
+</p>
+
+### 4️⃣ Clustering K-Means
+- Méthode du coude (Elbow Method) pour K optimal
+- Score Silhouette pour validation
+- 4 clusters clients identifiés et caractérisés
+
+<p align="center">
+  <img src="images/13_clusters_3d.png" alt="Clusters 3D" width="700"/>
+</p>
+
+### 5️⃣ Market Basket Analysis
+- Algorithme Apriori pour itemsets fréquents
+- Règles d'association (Support, Confidence, Lift)
+- Recommandations de cross-selling
+
+<p align="center">
+  <img src="images/15_association_rules.png" alt="Règles d'association" width="700"/>
+</p>
+
+### 6️⃣ Analyse de Pareto (80/20)
+- Identification des clients à haute valeur
+- Optimisation de l'allocation des ressources marketing
+
+<p align="center">
+  <img src="images/16_pareto_clients.png" alt="Analyse Pareto" width="700"/>
+</p>
+
+### 7️⃣ Séries Temporelles & Prévisions
+- Décomposition (Tendance + Saisonnalité + Résidus)
+- Tests de stationnarité (ADF, KPSS)
+- Modélisation SARIMA et Prophet
+- Prévisions à 12 semaines
+
+<p align="center">
+  <img src="images/25_previsions_futures.png" alt="Prévisions" width="800"/>
+</p>
+
+#### Performance des Modèles
+
+| Modèle | RMSE | MAPE | R² |
+|--------|------|------|-----|
+| **SARIMA** | 15 234 € | 12.3% | 0.78 |
+| **Prophet** | 14 892 € | 11.8% | 0.81 |
+
+---
+
+## 🛠️ Stack Technique
+
+### Langages & Librairies
+├── Python 3.9+
+│ ├── pandas # Manipulation de données
+│ ├── numpy # Calculs numériques
+│ ├── matplotlib # Visualisation
+│ ├── seaborn # Visualisation statistique
+│ ├── scikit-learn # Machine Learning
+│ ├── statsmodels # Séries temporelles
+│ ├── scipy # Tests statistiques
+│ ├── mlxtend # Market Basket Analysis
+│ └── prophet # Prévisions (Facebook)
+
+### Compétences Démontrées
+
+| Domaine | Techniques |
+|---------|------------|
+| **Data Cleaning** | Gestion des valeurs manquantes, doublons, outliers |
+| **Feature Engineering** | Extraction temporelle, création de variables |
+| **Statistiques** | Tests d'hypothèses (t-test, ADF, KPSS), corrélations |
+| **Machine Learning** | Clustering (K-Means), métriques d'évaluation |
+| **Time Series** | Décomposition, ARIMA, SARIMA, Prophet |
+| **Business Intelligence** | KPIs, segmentation RFM, analyse de cohortes |
+
+---
+
+## 📁 Structure du Projet
+projet-eda-ecommerce/
+│
+├── 📄 README.md # Ce fichier
+├── 📄 requirements.txt # Dépendances Python
+│
+├── 📂 data/
+│ └── 📄 ecommerce_data.csv # Dataset brut
+│
+├── 📂 notebooks/
+│ └── 📓 analyse_exploratoire.ipynb # Notebook principal
+│
+└── 📂 images/
+├── 📊 01_valeurs_manquantes.png
+├── 📊 02_evolution_mensuelle.png
+├── 📊 03_analyse_jour_semaine.png
+├── 📊 04_analyse_horaire.png
+├── 📊 05_top_pays.png
+├── 📊 06_top_produits.png
+├── 📊 07_distribution_montants.png
+├── 📊 08_segmentation_rfm.png
+├── 📊 09_matrice_retention.png
+├── 📊 10_courbe_retention.png
+├── 📊 11_correlations.png
+├── 📊 12_elbow_method.png
+├── 📊 13_clusters_3d.png
+├── 📊 14_clusters_2d.png
+├── 📊 15_association_rules.png
+├── 📊 16_pareto_clients.png
+├── 📊 17_serie_temporelle.png
+├── 📊 18_agregations_temporelles.png
+├── 📊 19_decomposition.png
+├── 📊 20_differenciation.png
+├── 📊 21_acf_pacf.png
+├── 📊 22_sarima_diagnostics.png
+├── 📊 23_predictions_sarima.png
+├── 📊 24_analyse_erreurs.png
+├── 📊 25_previsions_futures.png
+├── 📊 26_prophet_forecast.png
+├── 📊 27_prophet_components.png
+└── 📊 28_comparaison_modeles.png
+
+---
+
+## 🚀 Installation & Exécution
+
+### Prérequis
+- Python 3.9 ou supérieur
+- pip (gestionnaire de paquets Python)
+
+### Installation
+
+```bash
+# 1. Cloner le repository
+git clone https://github.com/VOTRE-USERNAME/projet-eda-ecommerce.git
+cd projet-eda-ecommerce
+
+# 2. Créer un environnement virtuel (recommandé)
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# ou
+venv\Scripts\activate  # Windows
+
+# 3. Installer les dépendances
+pip install -r requirements.txt
+
+# 4. Lancer Jupyter Notebook
+jupyter notebook notebooks/analyse_exploratoire.ipynb
+
+
+###💡 Recommandations Business
+# Recommandations Stratégiques et Informations du Projet
+
+Sur la base de cette analyse, voici les recommandations stratégiques :
+
+## 1️⃣ Optimisation Temporelle
+- Renforcer les équipes à 12h (pic de ventes)  
+- Campagnes marketing ciblées le jeudi  
+- Réduire les coûts opérationnels les jours creux  
+
+## 2️⃣ Expansion Géographique
+- Développer les marchés hors UK (82% du CA actuel)  
+- Cibler l'Allemagne, la France et les Pays-Bas  
+- Adapter la communication par pays  
+
+## 3️⃣ Gestion de la Relation Client
+- Programme VIP pour les Champions (10% clients, 40% CA)  
+- Campagnes de réactivation pour les clients Dormants  
+- Offres personnalisées basées sur le segment RFM  
+
+## 4️⃣ Cross-Selling
+- Exploiter les règles d'association pour les recommandations  
+- Bundles produits basés sur les achats fréquents  
+- Personnalisation du parcours client  
+
+## 5️⃣ Prévisions & Planification
+- Utiliser les modèles de prévision pour la gestion des stocks  
+- Anticiper les pics saisonniers  
+- Optimiser les ressources humaines  
+
+---
+
+## 📊 Dataset
+**Source :** UCI Machine Learning Repository - Online Retail Dataset  
+
+| Caractéristique | Valeur |
+|-----------------|--------|
+| Période         | 01/12/2010 - 09/12/2011 |
+| Transactions    | ~541 000 lignes |
+| Pays            | 38 pays |
+| Produits        | ~4 000 références |
+
+---
+
+## 👤 Auteur
+**Abderrahmane NAJEH - Data Analyst**  
+
+[LinkedIn](https://www.linkedin.com/in/abderrahmane-najeh)  
+[Email](mailto:abderrahmannajeh@gmail.com)  
+
+---
+
+## 📝 Licence
+Ce projet est sous **licence MIT** - voir le fichier `LICENSE` pour plus de détails.
+
+---
+
+## 🙏 Remerciements
+- UCI Machine Learning Repository pour le dataset  
+- La communauté Python Data Science pour les librairies open-source  
+
+<p align="center"><b>⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile !</b></p>
