@@ -10,6 +10,8 @@
   <img src="images/02_evolution_mensuelle.png" alt="Evolution des ventes" width="800"/>
 </p>
 
+---
+
 ## 🎯 Objectif du Projet
 
 Réaliser une **analyse exploratoire complète** d'un dataset e-commerce (~500 000 transactions) pour :
@@ -34,21 +36,18 @@ Réaliser une **analyse exploratoire complète** d'un dataset e-commerce (~500 0
 
 ### Insights Business
 
-✅ **Temporalité** : Pic de ventes à 12h, le jeudi est le jour le plus performant (+18% vs moyenne)
-
-✅ **Géographie** : Le Royaume-Uni représente 82% du CA → fort potentiel d'expansion internationale
-
-✅ **Pareto** : 20% des clients génèrent 80% du chiffre d'affaires
-
-✅ **Rétention** : Taux de rétention moyen de 25% après le 1er mois
+- ✅ **Temporalité** : Pic de ventes à 12h, jeudi le jour le plus performant (+18% vs moyenne)  
+- ✅ **Géographie** : Royaume-Uni → 82% du CA, fort potentiel international  
+- ✅ **Pareto** : 20% des clients génèrent 80% du chiffre d'affaires  
+- ✅ **Rétention** : Taux moyen 25% après le 1er mois  
 
 ---
 
 ## 🔬 Analyses Réalisées
 
 ### 1️⃣ Analyse Exploratoire (EDA)
-- Nettoyage des données (doublons, valeurs manquantes, outliers)
-- Feature engineering (extraction de composantes temporelles)
+- Nettoyage des données : doublons, valeurs manquantes, outliers
+- Feature engineering : extraction de composantes temporelles
 - Visualisations des distributions et tendances
 - Analyses géographiques et produits
 
@@ -101,7 +100,7 @@ Réaliser une **analyse exploratoire complète** d'un dataset e-commerce (~500 0
 </p>
 
 ### 7️⃣ Séries Temporelles & Prévisions
-- Décomposition (Tendance + Saisonnalité + Résidus)
+- Décomposition : tendance + saisonnalité + résidus
 - Tests de stationnarité (ADF, KPSS)
 - Modélisation SARIMA et Prophet
 - Prévisions à 12 semaines
@@ -112,151 +111,116 @@ Réaliser une **analyse exploratoire complète** d'un dataset e-commerce (~500 0
 
 #### Performance des Modèles
 
-| Modèle | RMSE | MAPE | R² |
-|--------|------|------|-----|
-| **SARIMA** | 15 234 € | 12.3% | 0.78 |
-| **Prophet** | 14 892 € | 11.8% | 0.81 |
+| Modèle   | RMSE      | MAPE   | R²   |
+|----------|-----------|--------|------|
+| SARIMA   | 15 234 €  | 12.3%  | 0.78 |
+| Prophet  | 14 892 €  | 11.8%  | 0.81 |
 
 ---
 
 ## 🛠️ Stack Technique
 
 ### Langages & Librairies
-├── Python 3.9+
-│ ├── pandas # Manipulation de données
-│ ├── numpy # Calculs numériques
-│ ├── matplotlib # Visualisation
-│ ├── seaborn # Visualisation statistique
-│ ├── scikit-learn # Machine Learning
-│ ├── statsmodels # Séries temporelles
-│ ├── scipy # Tests statistiques
-│ ├── mlxtend # Market Basket Analysis
-│ └── prophet # Prévisions (Facebook)
+- Python 3.9+
+- pandas, numpy, matplotlib, seaborn
+- scikit-learn, statsmodels, scipy
+- mlxtend (Market Basket Analysis)
+- prophet (Prévisions)
 
 ### Compétences Démontrées
 
 | Domaine | Techniques |
 |---------|------------|
-| **Data Cleaning** | Gestion des valeurs manquantes, doublons, outliers |
-| **Feature Engineering** | Extraction temporelle, création de variables |
-| **Statistiques** | Tests d'hypothèses (t-test, ADF, KPSS), corrélations |
-| **Machine Learning** | Clustering (K-Means), métriques d'évaluation |
-| **Time Series** | Décomposition, ARIMA, SARIMA, Prophet |
-| **Business Intelligence** | KPIs, segmentation RFM, analyse de cohortes |
+| Data Cleaning | Gestion valeurs manquantes, doublons, outliers |
+| Feature Engineering | Extraction temporelle, création variables |
+| Statistiques | Tests d’hypothèses (t-test, ADF, KPSS), corrélations |
+| Machine Learning | Clustering (K-Means), métriques d’évaluation |
+| Time Series | Décomposition, ARIMA, SARIMA, Prophet |
+| Business Intelligence | KPIs, segmentation RFM, analyse de cohortes |
 
 ---
 
 ## 📁 Structure du Projet
+
 projet-eda-ecommerce/
-│
-├── 📄 README.md # Ce fichier
-├── 📄 requirements.txt # Dépendances Python
-│
-├── 📂 data/
-│ └── 📄 ecommerce_data.csv # Dataset brut
-│
-├── 📂 notebooks/
-│ └── 📓 analyse_exploratoire.ipynb # Notebook principal
-│
-└── 📂 images/
-├── 📊 01_valeurs_manquantes.png
-├── 📊 02_evolution_mensuelle.png
-├── 📊 03_analyse_jour_semaine.png
-├── 📊 04_analyse_horaire.png
-├── 📊 05_top_pays.png
-├── 📊 06_top_produits.png
-├── 📊 07_distribution_montants.png
-├── 📊 08_segmentation_rfm.png
-├── 📊 09_matrice_retention.png
-├── 📊 10_courbe_retention.png
-├── 📊 11_correlations.png
-├── 📊 12_elbow_method.png
-├── 📊 13_clusters_3d.png
-├── 📊 14_clusters_2d.png
-├── 📊 15_association_rules.png
-├── 📊 16_pareto_clients.png
-├── 📊 17_serie_temporelle.png
-├── 📊 18_agregations_temporelles.png
-├── 📊 19_decomposition.png
-├── 📊 20_differenciation.png
-├── 📊 21_acf_pacf.png
-├── 📊 22_sarima_diagnostics.png
-├── 📊 23_predictions_sarima.png
-├── 📊 24_analyse_erreurs.png
-├── 📊 25_previsions_futures.png
-├── 📊 26_prophet_forecast.png
-├── 📊 27_prophet_components.png
-└── 📊 28_comparaison_modeles.png
+├── README.md
+├── requirements.txt
+├── data/
+│ └── ecommerce_data.csv
+├── notebooks/
+│ └── analyse_exploratoire.ipynb
+└── images/
+├── 01_valeurs_manquantes.png
+├── 02_evolution_mensuelle.png
+├── ...
+└── 28_comparaison_modeles.png
+
 
 ---
 
 ## 🚀 Installation & Exécution
 
-### Prérequis
-- Python 3.9 ou supérieur
-- pip (gestionnaire de paquets Python)
-
-### Installation
-
 ```bash
-# 1. Cloner le repository
+# Cloner le repository
 git clone https://github.com/VOTRE-USERNAME/projet-eda-ecommerce.git
 cd projet-eda-ecommerce
 
-# 2. Créer un environnement virtuel (recommandé)
+# Créer un environnement virtuel
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# ou
-venv\Scripts\activate  # Windows
+# Linux/Mac
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
 
-# 3. Installer les dépendances
+# Installer les dépendances
 pip install -r requirements.txt
 
-# 4. Lancer Jupyter Notebook
+# Lancer Jupyter Notebook
 jupyter notebook notebooks/analyse_exploratoire.ipynb
 
+---
 
-###💡 Recommandations Business
-# Recommandations Stratégiques et Informations du Projet
+## 💡 Recommandations Business
 
 Sur la base de cette analyse, voici les recommandations stratégiques :
 
-## 1️⃣ Optimisation Temporelle
-- Renforcer les équipes à 12h (pic de ventes)  
-- Campagnes marketing ciblées le jeudi  
-- Réduire les coûts opérationnels les jours creux  
+### 1️⃣ Optimisation Temporelle
+- Renforcer les équipes à **12h** (pic de ventes)  
+- Lancer des **campagnes marketing ciblées le jeudi**  
+- Réduire les **coûts opérationnels** les jours creux  
 
-## 2️⃣ Expansion Géographique
-- Développer les marchés hors UK (82% du CA actuel)  
-- Cibler l'Allemagne, la France et les Pays-Bas  
-- Adapter la communication par pays  
+### 2️⃣ Expansion Géographique
+- Développer les marchés **hors Royaume-Uni** (82% du CA actuel)  
+- Cibler : **Allemagne, France, Pays-Bas**  
+- Adapter la **communication et les offres** par pays  
 
-## 3️⃣ Gestion de la Relation Client
-- Programme VIP pour les Champions (10% clients, 40% CA)  
-- Campagnes de réactivation pour les clients Dormants  
-- Offres personnalisées basées sur le segment RFM  
+### 3️⃣ Gestion de la Relation Client
+- Mettre en place un **programme VIP** pour les Champions (10% clients, 40% CA)  
+- Lancer des **campagnes de réactivation** pour les clients Dormants  
+- Proposer des **offres personnalisées** basées sur le segment RFM  
 
-## 4️⃣ Cross-Selling
-- Exploiter les règles d'association pour les recommandations  
-- Bundles produits basés sur les achats fréquents  
-- Personnalisation du parcours client  
+### 4️⃣ Cross-Selling
+- Exploiter les **règles d'association** pour recommandations produits  
+- Créer des **bundles produits** basés sur les achats fréquents  
+- Personnaliser le **parcours client** selon le segment  
 
-## 5️⃣ Prévisions & Planification
-- Utiliser les modèles de prévision pour la gestion des stocks  
-- Anticiper les pics saisonniers  
-- Optimiser les ressources humaines  
+### 5️⃣ Prévisions & Planification
+- Utiliser les **modèles de prévision** pour la gestion des stocks  
+- Anticiper les **pics saisonniers**  
+- Optimiser les **ressources humaines**
 
 ---
 
 ## 📊 Dataset
+
 **Source :** UCI Machine Learning Repository - Online Retail Dataset  
 
 | Caractéristique | Valeur |
 |-----------------|--------|
-| Période         | 01/12/2010 - 09/12/2011 |
-| Transactions    | ~541 000 lignes |
-| Pays            | 38 pays |
-| Produits        | ~4 000 références |
+| **Période**     | 01/12/2010 - 09/12/2011 |
+| **Transactions**| ~541 000 lignes |
+| **Pays**        | 38 pays |
+| **Produits**    | ~4 000 références |
 
 ---
 
@@ -269,7 +233,7 @@ Sur la base de cette analyse, voici les recommandations stratégiques :
 ---
 
 ## 📝 Licence
-Ce projet est sous **licence MIT** - voir le fichier `LICENSE` pour plus de détails.
+Ce projet est sous **licence MIT** – voir le fichier `LICENSE` pour plus de détails.
 
 ---
 
