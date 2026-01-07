@@ -140,22 +140,23 @@ Réaliser une **analyse exploratoire complète** d'un dataset e-commerce (~500 0
 
 ---
 
+
 ## 📁 Structure du Projet
-
+```text
 projet-eda-ecommerce/
-├── README.md
-├── requirements.txt
+│
+├── README.md              # Documentation du projet
+├── requirements.txt       # Dépendances Python
+│
 ├── data/
-│ └── ecommerce_data.csv
+│   └── ecommerce_data.csv # Dataset brut
+│
 ├── notebooks/
-│ └── analyse_exploratoire.ipynb
+│   └── analyse_exploratoire.ipynb  # Notebook principal
+│
 └── images/
-├── 01_valeurs_manquantes.png
-├── 02_evolution_mensuelle.png
-├── ...
-└── 28_comparaison_modeles.png
-
-
+    └── *.png              # Visualisations et graphiques
+```
 ---
 
 ## 🚀 Installation & Exécution
@@ -177,7 +178,7 @@ pip install -r requirements.txt
 
 # Lancer Jupyter Notebook
 jupyter notebook notebooks/analyse_exploratoire.ipynb
-
+```
 ---
 
 ## 💡 Recommandations Business
